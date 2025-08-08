@@ -1,79 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liban Music - Music</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music | Liban Music</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Liban Music</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="music.html">Music</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h2>Music</h2>
-        <div class="music-grid">
-            <div class="track">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/upstage&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
-                </iframe>
-                <p>Upstage</p>
-            </div>
-            <div class="track">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/that-you-were-there&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
-                </iframe>
-                <p>That You Were There</p>
-            </div>
-            <div class="track">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/summer-girl&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
-                </iframe>
-                <p>Summer Girl</p>
-            </div>
-            <div class="track">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/twilight&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
-                </iframe>
-                <p>Twilight</p>
-            </div>
-            <div class="track">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/without-you&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
-                </iframe>
-                <p>Without You</p>
-            </div>
-            <div class="track">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/before&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
-                </iframe>
-                <p>Before</p>
-            </div>
-            <div class="track">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/me-and-you&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
-                </iframe>
-                <p>Me and You</p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2025 Liban Music. All rights reserved.</p>
-    </footer>
+  <!-- Navigation bar -->
+  <nav>
+    <div class="container">
+      <h1 class="logo">Liban Music</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Music listing section -->
+  <section class="music-list">
+    <div class="container">
+      <h1>Music</h1>
+      <p>Listen to Liban’s latest tracks on SoundCloud. Each player below
+        streams directly from his SoundCloud profile.</p>
+
+      <!-- Track: upstage (published 6 Aug 2025) -->
+      <div class="track">
+        <h3>upstage</h3>
+        <iframe height="300" scrolling="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/upstage&color=%23ff5500&auto_play=false&show_user=true"></iframe>
+      </div>
+
+      <!-- Track: That You Were There (published 23 Jul 2025) -->
+      <div class="track">
+        <h3>That You Were There</h3>
+        <iframe height="300" scrolling="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/that-you-were-there&color=%23ff5500&auto_play=false&show_user=true"></iframe>
+      </div>
+
+      <!-- Track: Summer Girl (published 4 Jul 2025) -->
+      <div class="track">
+        <h3>Summer Girl</h3>
+        <iframe height="300" scrolling="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/summer-girl&color=%23ff5500&auto_play=false&show_user=true"></iframe>
+      </div>
+
+      <!-- Track: Twilight (published 25 Jun 2025) -->
+      <div class="track">
+        <h3>Twilight</h3>
+        <iframe height="300" scrolling="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/twilight&color=%23ff5500&auto_play=false&show_user=true"></iframe>
+      </div>
+
+      <!-- Track: without you (published 16 Jun 2025) -->
+      <div class="track">
+        <h3>without you</h3>
+        <iframe height="300" scrolling="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/without-you&color=%23ff5500&auto_play=false&show_user=true"></iframe>
+      </div>
+
+      <!-- Track: Before (published 12 Jun 2025) -->
+      <div class="track">
+        <h3>Before</h3>
+        <iframe height="300" scrolling="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/before&color=%23ff5500&auto_play=false&show_user=true"></iframe>
+      </div>
+
+      <!-- Track: me and you (published 2 Jun 2025) -->
+      <div class="track">
+        <h3>me and you</h3>
+        <iframe height="300" scrolling="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/liban-646652752/me-and-you&color=%23ff5500&auto_play=false&show_user=true"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Liban Music. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
