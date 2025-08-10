@@ -200,24 +200,27 @@ footer {
 }
 
 /* Stripe CTA: gradient link styled as button */
+
 .buy-btn {
   display: inline-block;
-  background: linear-gradient(90deg, #ff6a00, #ee0979);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 14px 32px;
-  border-radius: 8px;
+  background: var(--primary); /* match 'Listen Now' colour */
+  color: var(--bg);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .buy-btn:hover,
 .buy-btn:focus-visible {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: var(--secondary); /* lighter orange hover */
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   outline: none;
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
