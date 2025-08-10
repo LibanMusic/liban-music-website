@@ -1,19 +1,16 @@
 /*
  * Core stylesheet for Liban’s music website.
  *
- * The colour palette is inspired by the warm orange tones and dark backgrounds
- * used on Liban’s SoundCloud page. Primary colours are defined as CSS
- * variables at the top of the document for easy tweaking. The layout
- * includes a fixed navigation bar, a full‑screen hero section with a
- * semi‑transparent overlay, and simple responsive layouts for the music
- * listings and informational pages.
+ * Palette: warm oranges on a deep dark background.
+ * Includes: fixed nav, full-screen hero with non-blocking overlay,
+ * responsive typography, and CTA styles (including Stripe buy button).
  */
 
 :root {
   --bg: #0d0d0d;          /* deep dark background */
-  --primary: #ff5500;     /* vibrant orange accent (taken from SoundCloud embed colour) */
+  --primary: #ff5500;     /* vibrant orange accent (SoundCloud vibe) */
   --secondary: #ff8c42;   /* lighter orange for hover states */
-  --text: #f5f5f5;        /* near‑white text colour */
+  --text: #f5f5f5;        /* near-white text colour */
 }
 
 html, body {
@@ -71,15 +68,17 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus-visible {
   color: var(--primary);
+  outline: none;
 }
 
 /* Hero section with background image */
 header {
   height: 85vh;
   background: url('hero.png') no-repeat center center/cover;
-  position: relative;
+  position: relative; /* create stacking context for overlay/content */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,43 +86,55 @@ header {
   margin-top: 60px; /* offset for fixed nav */
 }
 
+/* FIX: allow clicks to pass through overlay and keep it behind content */
 header .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(2px);
+  pointer-events: none; /* <- key fix */
+  z-index: 0;           /* behind content */
+}
+
+/* Ensure hero content is above the overlay */
+header .container {
+  position: relative;
+  z-index: 1;
 }
 
 header h1 {
-  position: relative;
   font-size: 3.5rem;
   margin: 0 0 1rem 0;
   line-height: 1.2;
 }
 
 header p {
-  position: relative;
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto 2rem auto;
 }
 
-header .btn {
-  position: relative;
+/* Primary button */
+header .btn,
+.btn {
+  display: inline-block;
   padding: 0.8rem 2rem;
   background: var(--primary);
   color: var(--bg);
-  border-radius: 4px;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
+  font-weight: 700;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-header .btn:hover {
+header .btn:hover,
+.btn:hover,
+header .btn:focus-visible,
+.btn:focus-visible {
   background: var(--secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  outline: none;
 }
 
 /* Generic section styling */
@@ -173,8 +184,10 @@ iframe {
   font-weight: 600;
 }
 
-.contact a:hover {
+.contact a:hover,
+.contact a:focus-visible {
   text-decoration: underline;
+  outline: none;
 }
 
 /* Footer styling */
@@ -184,6 +197,26 @@ footer {
   padding: 2rem 0;
   text-align: center;
   font-size: 0.9rem;
+}
+
+/* Stripe CTA: gradient link styled as button */
+.buy-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buy-btn:hover,
+.buy-btn:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
 /* Responsive adjustments */
@@ -197,4 +230,10 @@ footer {
   header p {
     font-size: 1rem;
   }
+  .buy-btn {
+    display: block;
+    margin: 12px auto 0;
+    text-align: center;
+  }
 }
+
